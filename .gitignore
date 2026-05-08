@@ -1,0 +1,21 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos de dependencias (si se usan en el futuro)
+node_modules/

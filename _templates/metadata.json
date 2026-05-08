@@ -1,0 +1,18 @@
+{
+  "titulo": "Nombre del proyecto",
+  "docente_guia": "Nombre completo del docente",
+  "autores": [
+    "Autor 1",
+    "Autor 2",
+    "Autor 3"
+  ],
+  "tecnologias": [
+    "Tecnología 1",
+    "Tecnología 2",
+    "Tecnología 3"
+  ],
+  "fecha": "AAAA-MM-DD",
+  "estado": "en desarrollo | finalizado | en evaluacion",
+  "licenciatura": "Nombre de la licenciatura",
+  "resumen_corto": "Descripcion breve del proyecto (maximo 200 caracteres)"
+}
