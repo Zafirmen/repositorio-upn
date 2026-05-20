@@ -23,11 +23,11 @@
         <span class="nav-logo-text">Depto. Tecnología <span class="nav-logo-accent">UPN</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#licenciaturas" class="nav-link">Licenciaturas</a></li>
+        <li><a href="index.html" class="nav-link" style="color: var(--primary);">Inicio</a></li>
         <li><a href="gallery.html" class="nav-link">Galería</a></li>
-        <li><a href="index.html#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="index.html#documentacion" class="nav-link">Documentación</a></li>
-        <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="flujo.html" class="nav-link">Flujo de Publicación</a></li>
+        <li><a href="documentacion.html" class="nav-link">Documentación</a></li>
         <li>
           <a href="https://github.com" target="_blank" rel="noopener" class="nav-link--cta">
             <svg class="nav-github-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
@@ -164,167 +164,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ PROYECTOS ═══════════════════ -->
-  <section class="section" id="proyectos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Galería</span>
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <p class="section-description">
-          Los proyectos más recientes desarrollados por nuestros docentes y estudiantes.
-        </p>
-      </div>
-
-      <div class="projects-filters" id="projectFilters">
-        <button class="filter-btn filter-btn--active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="diseno">Diseño Tecnológico</button>
-        <button class="filter-btn" data-filter="informatica">Informática Educativa</button>
-        <button class="filter-btn" data-filter="industria">Tecnología e Industria</button>
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Projects will be dynamically rendered from metadata.json files -->
-      </div>
-
-      <div class="projects-empty" id="projectsEmpty">
-        <div class="empty-state">
-          <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="64" height="64">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-            <line x1="3" y1="9" x2="21" y2="9"/>
-            <line x1="9" y1="21" x2="9" y2="9"/>
-          </svg>
-          <h3 class="empty-title">Sin exhibiciones activas</h3>
-          <p class="empty-description">
-            Los proyectos aparecerán aquí a medida que los docentes y estudiantes 
-            publiquen sus trabajos en el repositorio.
-          </p>
-          <a href="#documentacion" class="btn btn--outline btn--sm">
-            Ver guía de publicación
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ CÓMO CONTRIBUIR ═══════════════════ -->
-  <section class="section section--alt" id="documentacion">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Recursos</span>
-        <h2 class="section-title">Documentación</h2>
-        <p class="section-description">
-          Todo lo que necesitas para contribuir al repositorio departamental.
-        </p>
-      </div>
-
-      <div class="docs-list">
-
-        <a href="https://github.com" target="_blank" rel="noopener" class="doc-row" id="doc-contributing">
-          <div class="doc-row-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-            </svg>
-          </div>
-          <div class="doc-row-content">
-            <h3 class="doc-row-title">Guía de Contribución</h3>
-            <p class="doc-row-description">Normas generales, convenciones de ramas, estructura obligatoria y commits.</p>
-          </div>
-          <span class="doc-row-action">Leer →</span>
-        </a>
-
-        <a href="https://github.com" target="_blank" rel="noopener" class="doc-row" id="doc-docentes">
-          <div class="doc-row-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-            </svg>
-          </div>
-          <div class="doc-row-content">
-            <h3 class="doc-row-title">Guía para Docentes</h3>
-            <p class="doc-row-description">Flujo de trabajo paso a paso: crear ramas, subir proyectos y Pull Requests.</p>
-          </div>
-          <span class="doc-row-action">Leer →</span>
-        </a>
-
-        <a href="https://github.com" target="_blank" rel="noopener" class="doc-row" id="doc-autorizados">
-          <div class="doc-row-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
-              <circle cx="8.5" cy="7" r="4"/>
-              <line x1="20" y1="8" x2="20" y2="14"/>
-              <line x1="23" y1="11" x2="17" y2="11"/>
-            </svg>
-          </div>
-          <div class="doc-row-content">
-            <h3 class="doc-row-title">Usuarios Autorizados</h3>
-            <p class="doc-row-description">Cómo hacer fork, clonar y contribuir desde una cuenta externa.</p>
-          </div>
-          <span class="doc-row-action">Leer →</span>
-        </a>
-
-        <a href="https://github.com" target="_blank" rel="noopener" class="doc-row" id="doc-security">
-          <div class="doc-row-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0110 0v4"/>
-            </svg>
-          </div>
-          <div class="doc-row-content">
-            <h3 class="doc-row-title">Política de Seguridad</h3>
-            <p class="doc-row-description">Protecciones de rama, autenticación 2FA y control de acceso.</p>
-          </div>
-          <span class="doc-row-action">Leer →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ FLUJO DE TRABAJO ═══════════════════ -->
-  <section class="section" id="flujo">
-    <div class="container">
-      <div class="section-header section-header--center">
-        <span class="section-tag">Proceso</span>
-        <h2 class="section-title">Flujo de Publicación</h2>
-        <p class="section-description">
-          Un estándar claro para garantizar la calidad y preservación.
-        </p>
-      </div>
-
-      <div class="steps-timeline">
-        <div class="step" id="step-1">
-          <div class="step-number">01</div>
-          <div class="step-content">
-            <h3 class="step-title">Crear una rama</h3>
-            <p class="step-description">Crea una rama con el formato <code>feature/nombre-proyecto</code> desde <code>main</code>. Usuarios externos deben hacer fork primero.</p>
-          </div>
-        </div>
-        <div class="step" id="step-2">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <h3 class="step-title">Preparar Archivos</h3>
-            <p class="step-description">Incluye el manifiesto <code>metadata.json</code>, una imagen <code>banner.jpg</code> y el texto <code>contenido.md</code> en el directorio asignado.</p>
-          </div>
-        </div>
-        <div class="step" id="step-3">
-          <div class="step-content">
-            <h3 class="step-title">Pull Request</h3>
-            <p class="step-description">Abre el PR hacia <code>main</code> detallando los cambios y solicitando la revisión oficial.</p>
-          </div>
-          <div class="step-number">03</div>
-        </div>
-        <div class="step" id="step-4">
-          <div class="step-content">
-            <h3 class="step-title">Exhibición</h3>
-            <p class="step-description">Tras la aprobación, el proyecto se fusiona y se despliega automáticamente en esta galería.</p>
-          </div>
-          <div class="step-number">04</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════════════ CONTACTO ═══════════════════ -->
   <section class="section section--alt" id="contacto">

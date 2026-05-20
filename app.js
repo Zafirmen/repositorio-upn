@@ -24,11 +24,13 @@ function initMobileNavToggle() {
 
   navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open');
   });
 
   navLinks.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
     });
   });
 }
@@ -77,7 +79,8 @@ function initCounterAnimations() {
 // ─── Project filter buttons ───
 function initProjectFilters() {
   const filterContainer = document.getElementById('projectFilters');
-  if (!filterContainer) return;
+  const projectsGrid = document.getElementById('projectsGrid');
+  if (!filterContainer || !projectsGrid) return;
 
   filterContainer.addEventListener('click', (event) => {
     const clickedButton = event.target.closest('.filter-btn');
@@ -87,6 +90,17 @@ function initProjectFilters() {
       btn.classList.remove('filter-btn--active');
     });
     clickedButton.classList.add('filter-btn--active');
+
+    const filterValue = clickedButton.getAttribute('data-filter');
+    const projects = projectsGrid.querySelectorAll('.project-card');
+    
+    projects.forEach(project => {
+      if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+        project.style.display = 'flex';
+      } else {
+        project.style.display = 'none';
+      }
+    });
   });
 }
 

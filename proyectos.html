@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos — Departamento de Tecnología UPN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">⬡</span>
+        <span class="nav-logo-text">Depto. Tecnología <span class="nav-logo-accent">UPN</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="gallery.html" class="nav-link">Galería</a></li>
+        <li><a href="proyectos.html" class="nav-link" style="color: var(--primary);">Proyectos</a></li>
+        <li><a href="flujo.html" class="nav-link">Flujo de Publicación</a></li>
+        <li><a href="documentacion.html" class="nav-link">Documentación</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: var(--space-4xl);" id="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Directorio</span>
+        <h2 class="section-title">Todos los Proyectos</h2>
+        <p class="section-description">
+          Explora los desarrollos tecnológicos de nuestros docentes y estudiantes, clasificados por licenciatura.
+        </p>
+      </div>
+
+      <div class="projects-filters" id="projectFilters">
+        <button class="filter-btn filter-btn--active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="diseno">Diseño Tecnológico</button>
+        <button class="filter-btn" data-filter="informatica">Informática Educativa</button>
+        <button class="filter-btn" data-filter="industria">Tecnología e Industria</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- DUMMY PROJECTS FOR FILTERS -->
+        <div class="project-card" data-category="diseno">
+          <div class="project-image-box" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800&h=600'); background-size: cover; background-position: center;"></div>
+          <span class="card-tag">Diseño Tecnológico</span>
+          <h3 class="card-title">Prototipado en Resina</h3>
+          <p class="card-description">Modelado y pruebas de resistencia para piezas modulares en el aula.</p>
+        </div>
+
+        <div class="project-card" data-category="informatica">
+          <div class="project-image-box" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800&h=600'); background-size: cover; background-position: center;"></div>
+          <span class="card-tag">Informática Educativa</span>
+          <h3 class="card-title">Placa IoT Pedagógica</h3>
+          <p class="card-description">Desarrollo de hardware libre para la enseñanza de la programación.</p>
+        </div>
+
+        <div class="project-card" data-category="industria">
+          <div class="project-image-box" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800&h=1200'); background-size: cover; background-position: center;"></div>
+          <span class="card-tag">Tecnología e Industria</span>
+          <h3 class="card-title">Brazo Robótico H-200</h3>
+          <p class="card-description">Implementación de un sistema de automatización para procesos de manufactura escolar.</p>
+        </div>
+        
+        <div class="project-card" data-category="diseno">
+          <div class="project-image-box" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800&h=600'); background-size: cover; background-position: center;"></div>
+          <span class="card-tag">Diseño Tecnológico</span>
+          <h3 class="card-title">Modelado Paramétrico</h3>
+          <p class="card-description">Estudio de algoritmos para la generación de geometrías complejas 3D.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          UNIVERSIDAD PEDAGÓGICA NACIONAL
+        </div>
+        <p class="footer-copy">
+          @2026_Repositorio de proyectos institucionales
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

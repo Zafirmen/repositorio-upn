@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentación — Departamento de Tecnología UPN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .doc-section {
+      background: var(--surface-container);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+      border: 1px solid var(--surface-container-high);
+    }
+    .doc-section h3 {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--space-md);
+      color: var(--on-surface);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .doc-section p {
+      margin-bottom: var(--space-sm);
+      color: var(--on-surface-variant);
+    }
+    .doc-section ul {
+      margin-left: var(--space-lg);
+      margin-bottom: var(--space-md);
+      color: var(--on-surface-variant);
+    }
+    .doc-section li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">⬡</span>
+        <span class="nav-logo-text">Depto. Tecnología <span class="nav-logo-accent">UPN</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="gallery.html" class="nav-link">Galería</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="flujo.html" class="nav-link">Flujo de Publicación</a></li>
+        <li><a href="documentacion.html" class="nav-link" style="color: var(--primary);">Documentación</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTACION -->
+  <section class="section" style="padding-top: var(--space-4xl);" id="documentacion">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Recursos Internos</span>
+        <h2 class="section-title">Centro de Documentación</h2>
+        <p class="section-description">
+          A continuación encontrarás todas las instrucciones necesarias para colaborar en el repositorio departamental directamente desde esta página.
+        </p>
+      </div>
+
+      <div class="doc-section">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+          Guía de Contribución
+        </h3>
+        <p>Normas generales para garantizar la consistencia en todos los proyectos subidos:</p>
+        <ul>
+          <li><strong>Convenciones de Ramas:</strong> Todas las ramas nuevas deben empezar con <code>feature/</code> seguido del nombre del proyecto. Ejemplo: <code>feature/brazo-robotico</code>.</li>
+          <li><strong>Estructura Obligatoria:</strong> Cada proyecto debe vivir dentro de una carpeta que incluya un archivo <code>metadata.json</code>, una imagen representativa y el archivo base <code>index.html</code> (o equivalente).</li>
+          <li><strong>Commits:</strong> Utilizar el estándar de <em>Conventional Commits</em> (ej. <code>feat: añade prototipo IoT</code>, <code>fix: corrige dimensiones CSS</code>).</li>
+        </ul>
+      </div>
+
+      <div class="doc-section">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+          </svg>
+          Guía para Docentes
+        </h3>
+        <p>Instrucciones específicas para el flujo de validación:</p>
+        <ul>
+          <li><strong>Revisión de Estudiantes:</strong> Los proyectos de estudiantes deben ser sometidos a través de Pull Requests.</li>
+          <li><strong>Aprobación:</strong> El docente encargado del seminario o materia debe realizar un <em>Approve</em> oficial en GitHub antes de hacer merge a <code>main</code>.</li>
+          <li><strong>Publicación:</strong> Una vez aprobado, el sistema de integración desplegará automáticamente el proyecto en la galería y actualizará el archivo `proyectos.html`.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+            <circle cx="8.5" cy="7" r="4"/>
+            <line x1="20" y1="8" x2="20" y2="14"/>
+            <line x1="23" y1="11" x2="17" y2="11"/>
+          </svg>
+          Usuarios Autorizados
+        </h3>
+        <p>Cómo colaborar si no perteneces a la organización de GitHub del Departamento:</p>
+        <ul>
+          <li>Realiza un <strong>Fork</strong> del repositorio principal hacia tu cuenta personal.</li>
+          <li>Clona tu fork localmente en tu computadora.</li>
+          <li>Agrega tu proyecto en la carpeta correspondiente.</li>
+          <li>Crea un Pull Request desde tu Fork hacia el repositorio principal de la UPN.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          Política de Seguridad
+        </h3>
+        <p>Lineamientos para mantener la integridad del repositorio:</p>
+        <ul>
+          <li><strong>Protecciones de Rama:</strong> La rama <code>main</code> está protegida y no permite <em>pushes</em> directos, excepto por los administradores de sistemas designados.</li>
+          <li><strong>Autenticación 2FA:</strong> Todos los colaboradores con acceso de escritura deben tener activada la autenticación de dos pasos (2FA) en GitHub.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          UNIVERSIDAD PEDAGÓGICA NACIONAL
+        </div>
+        <p class="footer-copy">
+          @2026_Repositorio de proyectos institucionales
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
