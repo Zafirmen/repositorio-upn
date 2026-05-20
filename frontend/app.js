@@ -87,17 +87,13 @@ function initProjectFilters() {
       btn.classList.remove('filter-btn--active');
     });
     clickedButton.classList.add('filter-btn--active');
-
-    // Future: filter projects by data-filter attribute
-    // const filterValue = clickedButton.dataset.filter;
-    // filterProjectsByCategory(filterValue);
   });
 }
 
 // ─── Scroll-triggered reveal animations ───
 function initScrollReveal() {
   const revealElements = document.querySelectorAll(
-    '.card, .doc-card, .step, .contact-channel'
+    '.card, .doc-row, .step, .contact-channel'
   );
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -113,7 +109,7 @@ function initScrollReveal() {
   revealElements.forEach((element, index) => {
     element.style.opacity = '0';
     element.style.transform = 'translateY(24px)';
-    element.style.transition = `opacity 0.5s ease ${index * 0.08}s, transform 0.5s ease ${index * 0.08}s`;
+    element.style.transition = `opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.08}s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.08}s`;
     revealObserver.observe(element);
   });
 }
@@ -137,6 +133,37 @@ function initSmoothScrollLinks() {
   });
 }
 
+// ─── Interactive Ripple Effect ───
+function initRippleEffect() {
+  document.body.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.style.cssText = `
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 9999;
+        left: ${e.clientX}px;
+        top: ${e.clientY}px;
+        opacity: 1;
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        background: var(--primary);
+        box-shadow: 0 0 40px 10px var(--primary);
+    `;
+
+    document.body.appendChild(ripple);
+
+    requestAnimationFrame(() => {
+        ripple.style.transform = 'translate(-50%, -50%) scale(15)';
+        ripple.style.opacity = '0';
+    });
+
+    setTimeout(() => ripple.remove(), 600);
+  });
+}
+
 // ─── Initialize everything on DOM ready ───
 document.addEventListener('DOMContentLoaded', () => {
   initNavbarScrollEffect();
@@ -145,4 +172,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initScrollReveal();
   initSmoothScrollLinks();
+  initRippleEffect();
 });
