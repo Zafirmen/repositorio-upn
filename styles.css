@@ -340,7 +340,7 @@ code { background: var(--surface-container); padding: 0.15em 0.4em; border-radiu
   transition: var(--transition-fast);
 }
 .filter-btn:hover { background: var(--surface-container-high); color: var(--on-surface); }
-.filter-btn--active { background: var(--on-surface); color: var(--surface); }
+.filter-btn--active { background: var(--primary); color: var(--on-primary); }
 
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-xl); }
 
