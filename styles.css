@@ -79,6 +79,39 @@
   --shadow-elevation-2: 0px 12px 40px rgba(0,0,0,0.08);
 }
 
+/* ═══════════════════ DARK MODE (Obsidian Vibe) ═══════════════════ */
+[data-theme="dark"] {
+  --background: #1e1e1e;
+  --surface: #252525;
+  --surface-dim: #1a1a1a;
+  --surface-bright: #2d2d2d;
+  --surface-container-lowest: #121212;
+  --surface-container-low: #1e1e1e;
+  --surface-container: #252525;
+  --surface-container-high: #2d2d2d;
+  --surface-container-highest: #3b3b3b;
+  --on-surface: #e3e3e3;
+  --on-surface-variant: #a3a3a3;
+  --inverse-surface: #e3e3e3;
+  --inverse-on-surface: #1e1e1e;
+  
+  --outline: #555555;
+  --outline-variant: #333333;
+  
+  --primary: #7b61ff; /* Obsidian purple-ish accent */
+  --on-primary: #ffffff;
+  --primary-container: #5a45b8;
+  --on-primary-container: #ffffff;
+  
+  --secondary: #e2b022;
+  --on-secondary: #1e1e1e;
+  --secondary-container: #c49615;
+  --on-secondary-container: #ffffff;
+
+  --shadow-elevation-1: 0px 4px 20px rgba(0,0,0,0.2);
+  --shadow-elevation-2: 0px 12px 40px rgba(0,0,0,0.4);
+}
+
 /* ═══════════════════ RESET ═══════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -231,6 +264,25 @@ code { background: var(--surface-container); padding: 0.15em 0.4em; border-radiu
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--on-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+  margin-right: var(--space-md);
+}
+
+.theme-toggle:hover {
+  background: var(--surface-container-high);
 }
 
 /* ═══════════════════ BUTTONS ═══════════════════ */
